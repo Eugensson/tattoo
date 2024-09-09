@@ -1,0 +1,23 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export const Copyright = () => {
+  return (
+    <section className="bg-dark text-white/50 py-6 border-t border-[#2b2b2b]">
+      <div className="container mx-auto">
+        <motion.p
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "tween", duration: 0.8, delay: 0.2 }}
+          viewport={{ once: false, amount: 0 }}
+          className="tracking-[0.02em] text-base"
+        >
+          &copy; 2024
+          <span className="font-semibold text-white">The Void Tattoo.</span> All
+          rights reserved.
+        </motion.p>
+      </div>
+    </section>
+  );
+};
